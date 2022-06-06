@@ -47,7 +47,14 @@ const footballTeams = [
     },
 ]
 
-// const { nome, punti_fatti, falli_subiti} = footballTeams;
+const { nome, punti_fatti, falli_subiti } = footballTeams[0];
+
+let squadra = {
+    nome,
+    punti_fatti,
+    falli_subiti,
+    indice: 0,
+}
 
 const falliSubitilist = [];
 
@@ -69,4 +76,30 @@ for (let i = 0; i < footballTeams.length; i++) {
 console.table(footballTeams)
 console.table(falliSubitilist)
 
-console.log(falliSubitilist)
+
+
+// const { nome, punti_fatti, falli_subiti} = footballTeams;
+
+
+
+// const falliSubitilist = [];
+
+// for (let i = 0; i < footballTeams.length; i++) {
+//     const punti_fatti = Math.floor(Math.random() * 50);
+
+//     footballTeams[i].punti_fatti = punti_fatti;
+
+//     const falli_subiti = Math.floor(Math.random() * 30);
+
+//     footballTeams[i].falli_subiti = falli_subiti;
+
+//     const nome = footballTeams[i].nome
+
+//     falliSubitilist.push({nome, falli_subiti})
+
+// }
+
+// console.table(footballTeams)
+// console.table(falliSubitilist)
+
+// console.log(falliSubitilist)
