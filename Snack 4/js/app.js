@@ -41,6 +41,10 @@ console.log(upperCaseStudents);
 
 const over70 = students.filter((student, i) => {
 
+    if (!student.grades) {
+        return false;
+    }
+
     return student.grades > 70
 
 });
