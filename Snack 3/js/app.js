@@ -22,15 +22,25 @@ const forEachCycle = myArray.forEach((elementoCorrente, i) => {
 
 console.log(newArray)
 
-let newFilterArray = [];
 
-const filterCycle = myArray.filter((elementoCorrente, i) => {
-    if (i >= minNumber && i < maxnumber) {
-        return newFilterArray.push(elementoCorrente)
-    }
+// const filterCycle = myArray.filter((elementoCorrente, i) => {
+//     if (i >= minNumber && i < maxnumber) {
+//         return true
+//     }
+// })
+
+
+
+const filterCycle = myArray.filter((elementoCorrente, i) => (i >= minNumber && i < maxnumber));
+
+console.log(filterCycle);
+
+const listaConIndici = myArray
+.map((elementoCorrente, i) => {
+    return {
+        nome: elementoCorrente,
+        posizione: i,
+    };
 })
-
-console.log(newFilterArray)
-
-
+.filter((elementoCorrente, i) => i >= minNumber && i < maxnumber);
 
